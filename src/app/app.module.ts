@@ -10,6 +10,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ReceitasComponent } from './Relatorios/receitas/receitas.component';
 import { DespesasComponent } from './Relatorios/despesas/despesas.component';
+import { AppState } from './app.state';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -23,12 +27,15 @@ import { DespesasComponent } from './Relatorios/despesas/despesas.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [
+    AppState,
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync()    
   ],
-  bootstrap: [AppComponent]
+   bootstrap: [AppComponent]
 })
 export class AppModule { }

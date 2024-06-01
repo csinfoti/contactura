@@ -13,6 +13,7 @@ import { DespesasComponent } from './Relatorios/despesas/despesas.component';
 import { AppState } from './app.state';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -29,7 +30,9 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    MaterialModule,
+    ReactiveFormsModule,
   ],
   providers: [
     AppState,

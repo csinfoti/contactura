@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { IDespesa } from '../../shared/models/despesa.interface';
 
 @Component({
   selector: 'app-despesas',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrl: './despesas.component.scss'
 })
 export class DespesasComponent {
+
+  formulario!: FormGroup;
+  dataSource: IDespesa[] = [];
+  displayedColumns = ['data','valor','tipo','fixo','descricao','acoes'];
+
+  get valorTotal(): number {
+    return 0;
+  }
+
+  onPequisar(): void {
+
+  }
 
 }
